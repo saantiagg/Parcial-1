@@ -1,0 +1,32 @@
+public class Libro {
+    private String titulo;
+    private string autor;
+    private int cantidadDisponible;
+    private int cantidadPrestados; 
+
+    public Libro() {
+        this.titulo = "";
+        this.autor = "";
+        this.cantidadDisponible = 0;
+        this.cantidadPrestados = 0;
+
+        public String getTitulo() { return titulo;} 
+        public void setTitulo(String titulo) { this.titulo = titulo; }
+
+        public String getAutor() { return autor; }
+        public void setAutor(String autor) { this.autor = autor; }
+
+        public int getCantidadDisponible() { return cantidadDisponible; }
+        public void setCantidadDisponible (int cantidadDispoinible) { this.cantidadDisponible = cantidadDisponible; }
+
+        public int getCantidadPrestados() { return cantidadPrestados; }
+        public void setCatidadPrestados(int cantidadPrestados) { this.cantidadPrestados = cantidadPrestados; }
+
+
+    
+
+
+    }
+
+    
+}
