@@ -20,10 +20,36 @@ public class Libro {
         public void setCantidadDisponible (int cantidadDispoinible) { this.cantidadDisponible = cantidadDisponible; }
 
         public int getCantidadPrestados() { return cantidadPrestados; }
+        
         public void setCatidadPrestados(int cantidadPrestados) { this.cantidadPrestados = cantidadPrestados; }
 
+        public boolean prestar() {
+            if (cantidadPrestados < cantidadDisponible) {
+                cantidadPrestados++;
+                return true;
+            } else {
+                return false;
+            }
 
-    
+            public boolean devolver() {
+                if (cantidadPrestados > 0) {
+                    cantidadPrestados--;
+                    return true;
+                } else {
+                    return false;
+                }
+
+                @Override 
+
+                public String toString() {
+                    return "Libro{" +
+                            "titulo='" + titulo + '\'' +
+                            ", autor='" + autor + '\'' +
+                            ", cantidadDisponible=" + cantidadDisponible +
+                            ", cantidadPrestados=" + cantidadPrestados +
+                            '}';
+                }
+        }
 
 
     }
