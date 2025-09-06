@@ -1,14 +1,19 @@
 public class Libro {
     private String titulo;
-    private string autor;
+    private String autor;
     private int cantidadDisponible;
     private int cantidadPrestados; 
 
-    public Libro() {
-        this.titulo = "";
-        this.autor = "";
-        this.cantidadDisponible = 0;
-        this.cantidadPrestados = 0;
+    public Libro(String titulo, String autor, int cantidadDisponible, int cantidadPrestados) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.cantidadDisponible = cantidadDisponible;
+        this.cantidadPrestados = cantidadPrestados;
+
+    }
+
+    
+    
 
         public String getTitulo() { return titulo;} 
         public void setTitulo(String titulo) { this.titulo = titulo; }
@@ -17,25 +22,28 @@ public class Libro {
         public void setAutor(String autor) { this.autor = autor; }
 
         public int getCantidadDisponible() { return cantidadDisponible; }
-        public void setCantidadDisponible (int cantidadDispoinible) { this.cantidadDisponible = cantidadDisponible; }
+        public void setCantidadDisponible (int cantidadDisponible) { this.cantidadDisponible = cantidadDisponible; }
 
         public int getCantidadPrestados() { return cantidadPrestados; }
         
         public void setCatidadPrestados(int cantidadPrestados) { this.cantidadPrestados = cantidadPrestados; }
 
         public boolean prestar() {
-            if (cantidadPrestados < cantidadDisponible) {
-                cantidadPrestados++;
+            if (cantidadDisponible > 0) {
+                this.cantidadDisponible--;
+                this.cantidadPrestados++;
                 return true;
-            } else {
-                return false;
-            }
+            } 
+            return false;
+        }
 
-            public boolean devolver() {
+            
+         public boolean devolver() {
                 if (cantidadPrestados > 0) {
-                    cantidadPrestados--;
+                    this.cantidadPrestados--;
+                    this.cantidadDisponible++;
                     return true;
-                } else {
+                } 
                     return false;
                 }
 
@@ -52,7 +60,7 @@ public class Libro {
         }
 
 
-    }
+
 
     
-}
+
